@@ -1,4 +1,7 @@
 {
   "title": "超大陆",
-  "home-page-buttons": "单人,联机,存档,设置,退出"
+  "home-page-buttons": "单人,联机,存档,设置,退出",
+  "setting-language": "语言",
+  "setting-back": "返回",
+  "setting-confirm": "确认"
 }

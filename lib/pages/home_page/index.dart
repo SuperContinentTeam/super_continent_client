@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:super_continent_client/frameworks/home_framework.dart';
+import 'package:super_continent_client/pages/setting_page/index.dart';
 import 'dart:io';
 
 import 'controller.dart';
@@ -29,7 +31,9 @@ class HomePage extends StatelessWidget {
           child: Text(controller.save),
         ),
         MaterialButton(
-          onPressed: () {},
+          onPressed: () {
+            HomeFrameworkController.body.value = SettingPage();
+          },
           color: Colors.lightBlue,
           child: Text(controller.settings),
         ),

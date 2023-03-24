@@ -1,4 +1,7 @@
 {
   "title": "SuperContinent",
-  "home-page-buttons": "Single,Online,Save,Settings,Exit"
+  "home-page-buttons": "Single,Online,Save,Settings,Exit",
+  "setting-language": "Language",
+  "setting-back": "Back",
+  "setting-confirm": "Confirm"
 }

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:super_continent_client/utils/reference.dart';
 
 class MyLocalization {
@@ -7,11 +6,7 @@ class MyLocalization {
   static late Map _wordMap;
 
   static loadJsonFile(String language) async {
-    final jsonString = await rootBundle.loadString(
-      "assets/localization/$language.json",
-    );
-
-    return jsonString;
+    return await readAssetFile("localization/$language.json");
   }
 
   static initial({String language = "en"}) async {
