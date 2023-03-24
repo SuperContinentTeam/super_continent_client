@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:super_continent_client/utils/localization/core.dart';
 import 'package:get/get.dart';
+import 'dart:io';
 
 import 'controller.dart';
 
@@ -37,7 +38,9 @@ class HomePage extends StatelessWidget {
               child: Text(controller.settings),
             ),
             MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                exit(0);
+              },
               color: Colors.redAccent,
               child: Text(controller.exit),
             )
