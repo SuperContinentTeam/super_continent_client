@@ -1,10 +1,14 @@
 import 'dart:convert';
+import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:super_continent_client/utils/localization/core.dart';
 import 'package:super_continent_client/utils/reference.dart';
 
 import '../../storage/kv/core.dart';
 import '../../storage/kv/keys.dart';
+import '../../utils/dialogs.dart';
 
 class SettingPageController extends GetxController {
   RxMap<String, String> languageMap = RxMap<String, String>({});
@@ -22,12 +26,20 @@ class SettingPageController extends GetxController {
     final stringJson = await readAssetFile("localization/lang.json");
     languageMap.clear();
     final Map value = jsonDecode(stringJson);
-    value.forEach((key, value) {
+    value[selectedLanguage.value].forEach((key, value) {
       languageMap[key.toString()] = value.toString();
     });
   }
 
   changeSelectedLanguage(String? newValue) {
     selectedLanguage.value = newValue!;
+  }
+
+  confirm(BuildContext context) {
+    final desc = MyLocalization.get("setting-confirm-desc");
+    confirmDialog(context, desc, () async {
+      await HiveDataBase.common.put(HiveKeys.language, selectedLanguage.value);
+      exit(0);
+    });
   }
 }

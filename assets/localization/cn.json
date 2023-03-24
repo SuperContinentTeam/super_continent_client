@@ -3,5 +3,8 @@
   "home-page-buttons": "单人,联机,存档,设置,退出",
   "setting-language": "语言",
   "setting-back": "返回",
-  "setting-confirm": "确认"
+  "setting-confirm": "确认",
+  "setting-cancel": "取消",
+  "setting-confirm-desc": "需要重启应用",
+  "dialog-confirm-title": "确认？"
 }

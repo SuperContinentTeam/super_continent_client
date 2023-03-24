@@ -44,7 +44,9 @@ class SettingPage extends StatelessWidget {
               child: Text(MyLocalization.get("setting-back")),
             ),
             MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                controller.confirm(context);
+              },
               color: Colors.blueAccent,
               child: Text(MyLocalization.get("setting-confirm")),
             )
