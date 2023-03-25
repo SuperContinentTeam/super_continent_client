@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:super_continent_client/components/back_and_confirm.dart';
 import 'package:super_continent_client/frameworks/home_framework.dart';
 import 'package:super_continent_client/pages/home_page/index.dart';
 import 'package:super_continent_client/pages/setting_page/controller.dart';
@@ -32,23 +33,13 @@ class SettingPage extends StatelessWidget {
             )
           ],
         ),
-        Row(
-          children: [
-            MaterialButton(
-              onPressed: () {
-                HomeFrameworkController.body.value = HomePage();
-              },
-              color: Colors.blueGrey,
-              child: Text(MyLocalization.get("setting-back")),
-            ),
-            MaterialButton(
-              onPressed: () {
-                controller.confirm(context);
-              },
-              color: Colors.blueAccent,
-              child: Text(MyLocalization.get("setting-confirm")),
-            )
-          ],
+        BackAndConfirm(
+          backToDo: () {
+            HomeFrameworkController.body.value = HomePage();
+          },
+          confirmToDo: () {
+            controller.confirm(context);
+          },
         )
       ],
     );
