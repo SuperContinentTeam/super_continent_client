@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:super_continent_client/components/start_panel/index.dart';
 import 'package:super_continent_client/frameworks/home_framework.dart';
 import 'package:super_continent_client/pages/setting_page/index.dart';
 import 'dart:io';
@@ -16,7 +17,9 @@ class HomePage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         MaterialButton(
-          onPressed: () {},
+          onPressed: () {
+            HomeFrameworkController.body.value = StartPanel();
+          },
           color: Colors.lightBlue,
           child: Text(controller.single),
         ),

@@ -9,6 +9,7 @@ class StartPanelController extends GetxController {
   RxInt resourceRatio = 0.obs;
 
   final empireNameController = TextEditingController(text: "");
+  final aiCountController = TextEditingController(text: "0");
 
   changeWorldWidth(int? newValue) {
     worldWidth.value = newValue ?? 10;

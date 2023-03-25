@@ -9,5 +9,8 @@
   "dialog-confirm-title": "确认？",
   "start-panel-ratio-rich": "富饶",
   "start-panel-radio-default": "默认",
-  "start-panel-radio-barren": "贫瘠"
+  "start-panel-radio-barren": "贫瘠",
+  "start-panel-world-width": "世界宽度",
+  "start-panel-ai-count": "AI数量",
+  "start-panel-ai-desc": "参与游戏的AI，默认为0，最大不超过10"
 }

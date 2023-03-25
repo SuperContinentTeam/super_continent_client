@@ -10,5 +10,7 @@
   "start-panel-ratio-rich": "Rich",
   "start-panel-radio-default": "Normal",
   "start-panel-radio-barren": "Barren",
-  "start-panel-world-width": "World Width"
+  "start-panel-world-width": "World Width",
+  "start-panel-ai-count": "Count of AI",
+  "start-panel-ai-desc": "The default value for AI participating in the game is 0, and the maximum value is 10"
 }
