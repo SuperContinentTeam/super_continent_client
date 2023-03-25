@@ -26,9 +26,7 @@ class SettingPage extends StatelessWidget {
                     child: Text(e.value),
                   );
                 }).toList(),
-                onChanged: (newValue) {
-                  controller.changeSelectedLanguage(newValue);
-                },
+                onChanged: controller.changeSelectedLanguage,
                 value: controller.selectedLanguage.value,
               ),
             )

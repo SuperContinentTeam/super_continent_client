@@ -6,5 +6,9 @@
   "setting-confirm": "Confirm",
   "setting-cancel": "Cancel",
   "setting-confirm-desc": "This application have to reboot",
-  "dialog-confirm-title": "Confirm?"
+  "dialog-confirm-title": "Confirm?",
+  "start-panel-ratio-rich": "Rich",
+  "start-panel-radio-default": "Normal",
+  "start-panel-radio-barren": "Barren",
+  "start-panel-world-width": "World Width"
 }

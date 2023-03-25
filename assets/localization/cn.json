@@ -6,5 +6,8 @@
   "setting-confirm": "确认",
   "setting-cancel": "取消",
   "setting-confirm-desc": "需要重启应用",
-  "dialog-confirm-title": "确认？"
+  "dialog-confirm-title": "确认？",
+  "start-panel-ratio-rich": "富饶",
+  "start-panel-radio-default": "默认",
+  "start-panel-radio-barren": "贫瘠"
 }

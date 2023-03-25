@@ -32,7 +32,7 @@ class SettingPageController extends GetxController {
   }
 
   changeSelectedLanguage(String? newValue) {
-    selectedLanguage.value = newValue!;
+    selectedLanguage.value = newValue ?? "en";
   }
 
   confirm(BuildContext context) {
