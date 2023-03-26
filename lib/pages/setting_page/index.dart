@@ -17,18 +17,21 @@ class SettingPage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(MyLocalization.get("setting-language")),
-            Obx(
-              () => DropdownButton<String>(
-                items: controller.languageMap.entries.map((e) {
-                  return DropdownMenuItem<String>(
-                    value: e.key,
-                    child: Text(e.value),
-                  );
-                }).toList(),
-                onChanged: controller.changeSelectedLanguage,
-                value: controller.selectedLanguage.value,
+            Expanded(child: Text(MyLocalization.get("setting-language"))),
+            Expanded(
+              child: Obx(
+                () => DropdownButton<String>(
+                  items: controller.languageMap.entries.map((e) {
+                    return DropdownMenuItem<String>(
+                      value: e.key,
+                      child: Text(e.value),
+                    );
+                  }).toList(),
+                  onChanged: controller.changeSelectedLanguage,
+                  value: controller.selectedLanguage.value,
+                ),
               ),
             )
           ],

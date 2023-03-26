@@ -7,10 +7,18 @@
   "setting-cancel": "取消",
   "setting-confirm-desc": "需要重启应用",
   "dialog-confirm-title": "确认？",
+  "dialog-color-picker": "颜色选择",
+  "start-panel-resource": "资源比例",
+  "start-panel-resource-desc": "理想地块比例:富饶20%，默认10%，贫瘠5%",
   "start-panel-ratio-rich": "富饶",
-  "start-panel-radio-default": "默认",
-  "start-panel-radio-barren": "贫瘠",
+  "start-panel-ratio-default": "默认",
+  "start-panel-ratio-barren": "贫瘠",
   "start-panel-world-width": "世界宽度",
   "start-panel-ai-count": "AI数量",
-  "start-panel-ai-desc": "参与游戏的AI，默认为0，最大不超过10"
+  "start-panel-ai-desc": "参与游戏的AI，默认为0，最大不超过10",
+  "start-panel-payer": "------- 玩家个性化设置 -------",
+  "start-panel-country-name": "国家名称",
+  "start-panel-country-color": "国家主色",
+  "start-panel-using-ai": "启用AI",
+  "start-panel-import-ai": "导入AI模型"
 }

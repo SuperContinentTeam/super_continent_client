@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
       children: [
         MaterialButton(
           onPressed: () {
-            HomeFrameworkController.body.value = StartPanel();
+            HomeFrameworkController.body.value = StartPanel(isOwner: true);
           },
           color: Colors.lightBlue,
           child: Text(controller.single),

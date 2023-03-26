@@ -7,10 +7,15 @@
   "setting-cancel": "Cancel",
   "setting-confirm-desc": "This application have to reboot",
   "dialog-confirm-title": "Confirm?",
+  "dialog-color-picker": "Select color",
+  "start-panel-resource": "Proportion of resources",
+  "start-panel-resource-desc": "The ideal block proportions are: 20% Rich, 10% Normal, and 5% Barren",
   "start-panel-ratio-rich": "Rich",
-  "start-panel-radio-default": "Normal",
-  "start-panel-radio-barren": "Barren",
+  "start-panel-ratio-default": "Normal",
+  "start-panel-ratio-barren": "Barren",
   "start-panel-world-width": "World Width",
   "start-panel-ai-count": "Count of AI",
-  "start-panel-ai-desc": "The default value for AI participating in the game is 0, and the maximum value is 10"
+  "start-panel-ai-desc": "The default value for AI participating in the game is 0, and the maximum value is 10",
+  "start-panel-using-ai": "Active AI",
+  "start-panel-import-ai": "Import AI module"
 }

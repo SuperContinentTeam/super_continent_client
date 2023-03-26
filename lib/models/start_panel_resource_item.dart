@@ -8,7 +8,7 @@ class StartPanelResourceItem {
 }
 
 Map<int, StartPanelResourceItem> resourceItemMap = {
-  0: StartPanelResourceItem(MyLocalization.get("start-panel-radio-rich"), 10),
-  1: StartPanelResourceItem(MyLocalization.get("start-panel-radio-default"), 5),
-  2: StartPanelResourceItem(MyLocalization.get("start-panel-radio-barren"), 20)
+  0: StartPanelResourceItem(MyLocalization.get("start-panel-ratio-default"), 10),
+  1: StartPanelResourceItem(MyLocalization.get("start-panel-ratio-barren"), 5),
+  2: StartPanelResourceItem(MyLocalization.get("start-panel-ratio-rich"), 20)
 };
