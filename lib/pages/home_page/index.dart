@@ -23,8 +23,14 @@ class HomePage extends StatelessWidget {
               Expanded(
                 child: ElevatedButton(
                   onPressed: () {
-                    HomeFrameworkController.body.value =
-                        StartPanel(isOwner: true);
+                    HomeFrameworkController.body.value = Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Expanded(flex: 2, child: Container()),
+                        Expanded(flex: 4, child: StartPanel(isOwner: true)),
+                        Expanded(child: Container())
+                      ],
+                    );
                   },
                   child: Text(controller.single),
                 ),
@@ -55,8 +61,7 @@ class HomePage extends StatelessWidget {
                     exit(0);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.redAccent
-                  ),
+                      backgroundColor: Colors.redAccent),
                   child: Text(controller.exit),
                 ),
               )
