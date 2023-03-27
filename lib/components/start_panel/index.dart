@@ -21,178 +21,183 @@ class StartPanel extends StatelessWidget {
     return GetBuilder<StartPanelController>(
         init: controller,
         builder: (_) {
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
+          return Row(children: [
+            Expanded(flex: 2, child: Container()),
+            Expanded(
+              flex: 4,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Expanded(child: Container()),
-                  Expanded(
-                    child: Text(MyLocalization.get("start-panel-world-width")),
-                  ),
-                  Expanded(
-                    child: DropdownButton<int>(
-                      items: controller.worldWidthItems
-                          .map((e) => DropdownMenuItem<int>(
-                                value: e,
-                                child: Text(e.toString()),
-                              ))
-                          .toList(),
-                      onChanged: isOwner ? controller.changeWorldWidth : null,
-                      value: controller.worldWidth.value,
-                    ),
-                  ),
-                  Expanded(
-                    flex: 4,
-                    child: Container(),
-                  )
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(child: Container()),
-                  Expanded(
-                    child: Text(MyLocalization.get("start-panel-ai-count")),
-                  ),
-                  Expanded(
-                    child: TextField(
-                      enabled: isOwner,
-                      controller: controller.aiCountController,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        FilteringTextInputFormatter.allow(RegExp(r"\d{0,10}$")),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 4,
-                    child: Text(MyLocalization.get("start-panel-ai-desc")),
-                  )
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(child: Container()),
-                  Expanded(
-                    child: Text(MyLocalization.get("start-panel-resource")),
-                  ),
-                  Expanded(
-                    child: DropdownButton<int>(
-                      items: resourceItemMap.entries
-                          .map((e) => DropdownMenuItem<int>(
-                                value: e.key,
-                                child: Text(e.value.description),
-                              ))
-                          .toList(),
-                      onChanged:
-                          isOwner ? controller.changeResourceRatio : null,
-                      value: controller.resourceRatio.value,
-                    ),
-                  ),
-                  Expanded(
-                    flex: 4,
-                    child:
-                        Text(MyLocalization.get("start-panel-resource-desc")),
-                  )
-                ],
-              ),
-              Text(
-                MyLocalization.get("start-panel-payer"),
-                style: const TextStyle(color: Colors.red),
-              ),
-              Row(
-                children: [
-                  Expanded(child: Container()),
-                  Expanded(
-                    child: Text(MyLocalization.get("start-panel-country-name")),
-                  ),
-                  Expanded(
-                    child: TextField(
-                      controller: controller.countryNameController,
-                    ),
-                  ),
-                  Expanded(
-                    flex: 4,
-                    child: Container(),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(child: Container()),
-                  Expanded(
-                    child:
-                        Text(MyLocalization.get("start-panel-country-color")),
-                  ),
-                  Expanded(
-                    child: MaterialButton(
-                      onPressed: () {
-                        controller.changeCountryColor(context);
-                      },
-                      child: Container(
-                        width: 100,
-                        height: 15,
-                        decoration: BoxDecoration(
-                          color: controller.countryColor.value,
-                          shape: BoxShape.rectangle,
+                  Row(
+                    children: [
+                      Expanded(
+                        child:
+                            Text(MyLocalization.get("start-panel-world-width")),
+                      ),
+                      Expanded(
+                        child: DropdownButton<int>(
+                          items: controller.worldWidthItems
+                              .map((e) => DropdownMenuItem<int>(
+                                    value: e,
+                                    child: Text(e.toString()),
+                                  ))
+                              .toList(),
+                          onChanged:
+                              isOwner ? controller.changeWorldWidth : null,
+                          value: controller.worldWidth.value,
                         ),
                       ),
-                    ),
+                      Expanded(
+                        flex: 4,
+                        child: Container(),
+                      )
+                    ],
                   ),
-                  Expanded(flex: 4, child: Container())
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(child: Container()),
-                  Expanded(
-                    child: Text(MyLocalization.get("start-panel-using-ai")),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(MyLocalization.get("start-panel-ai-count")),
+                      ),
+                      Expanded(
+                        child: TextField(
+                          enabled: isOwner,
+                          controller: controller.aiCountController,
+                          keyboardType: TextInputType.number,
+                          inputFormatters: [
+                            FilteringTextInputFormatter.allow(
+                                RegExp(r"\d{0,10}$")),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        flex: 4,
+                        child: Text(MyLocalization.get("start-panel-ai-desc")),
+                      )
+                    ],
                   ),
-                  Expanded(
-                    child: Checkbox(
-                      onChanged: controller.changeUsingAI,
-                      value: controller.usingAI.value,
-                    ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(MyLocalization.get("start-panel-resource")),
+                      ),
+                      Expanded(
+                        child: DropdownButton<int>(
+                          items: resourceItemMap.entries
+                              .map((e) => DropdownMenuItem<int>(
+                                    value: e.key,
+                                    child: Text(e.value.description),
+                                  ))
+                              .toList(),
+                          onChanged:
+                              isOwner ? controller.changeResourceRatio : null,
+                          value: controller.resourceRatio.value,
+                        ),
+                      ),
+                      Expanded(
+                        flex: 4,
+                        child: Text(
+                            MyLocalization.get("start-panel-resource-desc")),
+                      )
+                    ],
                   ),
-                  Expanded(flex: 4, child: Container())
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(child: Container()),
-                  Expanded(
-                    child: Text(MyLocalization.get("start-panel-import-ai")),
+                  Text(
+                    MyLocalization.get("start-panel-payer"),
+                    style: const TextStyle(color: Colors.red),
                   ),
-                  Expanded(
-                    child: TextField(
-                      controller: controller.aiModuleController,
-                    ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                            MyLocalization.get("start-panel-country-name")),
+                      ),
+                      Expanded(
+                        child: TextField(
+                          controller: controller.countryNameController,
+                        ),
+                      ),
+                      Expanded(
+                        flex: 4,
+                        child: Container(),
+                      ),
+                    ],
                   ),
-                  Expanded(
-                    flex: 4,
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: controller.importAIModule,
-                            child: Text(
-                                MyLocalization.get("start-panel-import-ai")),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                            MyLocalization.get("start-panel-country-color")),
+                      ),
+                      Expanded(
+                        child: MaterialButton(
+                          onPressed: () {
+                            controller.changeCountryColor(context);
+                          },
+                          child: Container(
+                            width: 100,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              color: controller.countryColor.value,
+                              shape: BoxShape.rectangle,
+                            ),
                           ),
                         ),
-                        Expanded(flex: 3, child: Container())
-                      ],
-                    ),
+                      ),
+                      Expanded(flex: 4, child: Container())
+                    ],
                   ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(MyLocalization.get("start-panel-using-ai")),
+                      ),
+                      Expanded(
+                        child: Checkbox(
+                          onChanged: controller.changeUsingAI,
+                          value: controller.usingAI.value,
+                        ),
+                      ),
+                      Expanded(flex: 4, child: Container())
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child:
+                            Text(MyLocalization.get("start-panel-import-ai")),
+                      ),
+                      Expanded(
+                        child: TextField(
+                          controller: controller.aiModuleController,
+                        ),
+                      ),
+                      Expanded(
+                        flex: 4,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: ElevatedButton(
+                                onPressed: controller.importAIModule,
+                                child: Text(MyLocalization.get(
+                                    "start-panel-import-ai")),
+                              ),
+                            ),
+                            Expanded(child: Container())
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  BackAndConfirm(
+                    backToDo: () {
+                      HomeFrameworkController.body.value = HomePage();
+                    },
+                    confirmToDo: () {},
+                  )
                 ],
               ),
-              BackAndConfirm(
-                backToDo: () {
-                  HomeFrameworkController.body.value = HomePage();
-                },
-                confirmToDo: () {},
-              )
-            ],
-          );
+            ),
+            Expanded(child: Container())
+          ]);
         });
   }
 }
