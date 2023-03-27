@@ -26,6 +26,7 @@ class StartPanel extends StatelessWidget {
             children: [
               Row(
                 children: [
+                  Expanded(child: Container()),
                   Expanded(
                     child: Text(MyLocalization.get("start-panel-world-width")),
                   ),
@@ -49,6 +50,7 @@ class StartPanel extends StatelessWidget {
               ),
               Row(
                 children: [
+                  Expanded(child: Container()),
                   Expanded(
                     child: Text(MyLocalization.get("start-panel-ai-count")),
                   ),
@@ -70,6 +72,7 @@ class StartPanel extends StatelessWidget {
               ),
               Row(
                 children: [
+                  Expanded(child: Container()),
                   Expanded(
                     child: Text(MyLocalization.get("start-panel-resource")),
                   ),
@@ -99,6 +102,7 @@ class StartPanel extends StatelessWidget {
               ),
               Row(
                 children: [
+                  Expanded(child: Container()),
                   Expanded(
                     child: Text(MyLocalization.get("start-panel-country-name")),
                   ),
@@ -115,6 +119,7 @@ class StartPanel extends StatelessWidget {
               ),
               Row(
                 children: [
+                  Expanded(child: Container()),
                   Expanded(
                     child:
                         Text(MyLocalization.get("start-panel-country-color")),
@@ -139,6 +144,7 @@ class StartPanel extends StatelessWidget {
               ),
               Row(
                 children: [
+                  Expanded(child: Container()),
                   Expanded(
                     child: Text(MyLocalization.get("start-panel-using-ai")),
                   ),
@@ -153,6 +159,7 @@ class StartPanel extends StatelessWidget {
               ),
               Row(
                 children: [
+                  Expanded(child: Container()),
                   Expanded(
                     child: Text(MyLocalization.get("start-panel-import-ai")),
                   ),
@@ -163,11 +170,19 @@ class StartPanel extends StatelessWidget {
                   ),
                   Expanded(
                     flex: 4,
-                    child: ElevatedButton(
-                      onPressed: controller.importAIModule,
-                      child: Text(MyLocalization.get("start-panel-import-ai")),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: controller.importAIModule,
+                            child: Text(
+                                MyLocalization.get("start-panel-import-ai")),
+                          ),
+                        ),
+                        Expanded(flex: 3, child: Container())
+                      ],
                     ),
-                  )
+                  ),
                 ],
               ),
               BackAndConfirm(

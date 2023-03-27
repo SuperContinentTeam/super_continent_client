@@ -19,6 +19,7 @@ class SettingPage extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Expanded(child: Container()),
             Expanded(child: Text(MyLocalization.get("setting-language"))),
             Expanded(
               child: Obx(
@@ -33,7 +34,8 @@ class SettingPage extends StatelessWidget {
                   value: controller.selectedLanguage.value,
                 ),
               ),
-            )
+            ),
+            Expanded(child: Container())
           ],
         ),
         BackAndConfirm(

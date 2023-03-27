@@ -14,39 +14,55 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        MaterialButton(
-          onPressed: () {
-            HomeFrameworkController.body.value = StartPanel(isOwner: true);
-          },
-          color: Colors.lightBlue,
-          child: Text(controller.single),
+        Expanded(flex: 9, child: Container()),
+        Expanded(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    HomeFrameworkController.body.value =
+                        StartPanel(isOwner: true);
+                  },
+                  child: Text(controller.single),
+                ),
+              ),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text(controller.online),
+                ),
+              ),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text(controller.save),
+                ),
+              ),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    HomeFrameworkController.body.value = SettingPage();
+                  },
+                  child: Text(controller.settings),
+                ),
+              ),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: () {
+                    exit(0);
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.redAccent
+                  ),
+                  child: Text(controller.exit),
+                ),
+              )
+            ],
+          ),
         ),
-        MaterialButton(
-          onPressed: () {},
-          color: Colors.lightBlue,
-          child: Text(controller.online),
-        ),
-        MaterialButton(
-          onPressed: () {},
-          color: Colors.lightBlue,
-          child: Text(controller.save),
-        ),
-        MaterialButton(
-          onPressed: () {
-            HomeFrameworkController.body.value = SettingPage();
-          },
-          color: Colors.lightBlue,
-          child: Text(controller.settings),
-        ),
-        MaterialButton(
-          onPressed: () {
-            exit(0);
-          },
-          color: Colors.redAccent,
-          child: Text(controller.exit),
-        )
       ],
     );
   }
