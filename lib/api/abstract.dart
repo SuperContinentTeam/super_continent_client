@@ -9,6 +9,7 @@ class DioAgent {
   }
 
   get(String api, {Map<String, dynamic>? params, Options? options}) async {
+    logI("GET ${dio.options.baseUrl}$api");
     try {
       return await dio.get(api, queryParameters: params, options: options);
     } catch (e) {
@@ -17,9 +18,10 @@ class DioAgent {
   }
 
   post(String api, Map<String, dynamic> data, {Options? options}) async {
-    try{
+    logI("POST ${dio.options.baseUrl}$api");
+    try {
       return await dio.post(api, data: data, options: options);
-    }catch (e) {
+    } catch (e) {
       logE("API ERROR: ${dio.options.baseUrl}$api, ${e.toString()}");
     }
   }
