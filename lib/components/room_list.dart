@@ -54,7 +54,7 @@ class RoomList extends StatelessWidget {
         .asMap()
         .entries
         .map((e) => TableRow(children: [
-              _buildCell(e.key.toString()),
+              _buildCell((1 + e.key).toString()),
               _buildCell(e.value.name),
               _buildCell(
                 roomStatus[e.value.status].toString(),
