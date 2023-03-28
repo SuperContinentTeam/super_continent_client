@@ -10,7 +10,7 @@ class HiveDataBase {
     common = await Hive.openBox(HiveKeys.common);
 
     if (!common.containsKey(HiveKeys.language)) {
-      await common.put(HiveKeys.language, "en");
+      await common.put(HiveKeys.language, "cn");
     }
   }
 

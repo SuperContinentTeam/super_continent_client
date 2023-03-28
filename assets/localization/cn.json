@@ -20,5 +20,16 @@
   "start-panel-country-name": "国家名称",
   "start-panel-country-color": "国家主色",
   "start-panel-using-ai": "启用AI",
-  "start-panel-import-ai": "导入AI模型"
+  "start-panel-import-ai": "导入AI模型",
+  "room-status-0": "等待",
+  "room-status-1": "开战",
+  "room-action-join": "加入",
+  "room-action-watch": "观战",
+  "online-room-name": "房间名",
+  "online-room-people": "人数",
+  "online-room-status": "状态",
+  "online-room-action": "动作",
+  "online-join-room": "加入房间",
+  "online-create-room": "创建房间",
+  "online-exit": "退出大厅"
 }
