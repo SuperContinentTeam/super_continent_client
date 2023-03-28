@@ -1,7 +1,8 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:super_continent_client/utils/dialogs/confirm_dialog.dart';
+
+import '../../utils/dialogs/show_color_picker.dart';
 
 class StartPanelController extends GetxController {
   RxInt worldWidth = 10.obs;
