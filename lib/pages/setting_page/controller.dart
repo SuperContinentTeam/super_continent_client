@@ -8,7 +8,7 @@ import 'package:super_continent_client/utils/reference.dart';
 
 import '../../storage/kv/core.dart';
 import '../../storage/kv/keys.dart';
-import '../../utils/dialogs.dart';
+import '../../utils/dialogs/confirm_dialog.dart';
 
 class SettingPageController extends GetxController {
   RxMap<String, String> languageMap = RxMap<String, String>({});
