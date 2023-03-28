@@ -12,11 +12,10 @@ List<Room> demoRoomList = [
   Room("Test7", 12, 0, "xxx7"),
   Room("Test8", 20, 1, "xxx8"),
   Room("Test9", 12, 0, "xxx9"),
-  Room("Test10", 20, 1, "xxx10"),
-  Room("Test11", 12, 0, "xxx11"),
-  Room("Test12", 20, 1, "xxx12"),
+  Room("Test10", 20, 1, "xxx10")
 ];
 
 class OnlinePageController {
-
+  String name = "万千少女的梦";
+  int rank = 999;
 }

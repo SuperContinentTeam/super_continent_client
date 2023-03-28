@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:super_continent_client/components/start_panel/index.dart';
 import 'package:super_continent_client/frameworks/home_framework.dart';
+import 'package:super_continent_client/pages/online_page/index.dart';
 import 'package:super_continent_client/pages/setting_page/index.dart';
 import 'dart:io';
 
@@ -37,7 +38,9 @@ class HomePage extends StatelessWidget {
               ),
               Expanded(
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    HomeFrameworkController.body.value = OnlinePage();
+                  },
                   child: Text(controller.online),
                 ),
               ),
