@@ -14,7 +14,7 @@ class MyLocalization {
       _stringJson = await loadJsonFile(language);
     } catch (e) {
       printf(e);
-      _stringJson = await loadJsonFile("en");
+      _stringJson = await loadJsonFile("cn");
     }
     _wordMap = jsonDecode(_stringJson);
   }
