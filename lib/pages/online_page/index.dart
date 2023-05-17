@@ -19,7 +19,10 @@ class OnlinePage extends StatelessWidget {
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [Text(controller.name), Text("Rank分: ${controller.rank}")],
+          children: [
+            Text("昵称: ${controller.name}"),
+            Text("Rank分: ${controller.rank}")
+          ],
         ),
         Flexible(child: RoomList(roomList: demoRoomList)),
         Row(

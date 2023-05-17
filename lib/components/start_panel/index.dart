@@ -53,13 +53,13 @@ class StartPanel extends StatelessWidget {
                     child: Text(MyLocalization.get("start-panel-ai-count")),
                   ),
                   Expanded(
-                    child: TextField(
-                      enabled: isOwner,
-                      controller: controller.aiCountController,
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        FilteringTextInputFormatter.allow(RegExp(r"\d{0,10}$")),
-                      ],
+                    child: Slider(
+                      value: controller.aiCount.toDouble(),
+                      min: 0,
+                      max: 10,
+                      divisions: 10,
+                      onChanged: controller.changeAiCount,
+                      label: controller.aiCount.toString(),
                     ),
                   ),
                   Expanded(

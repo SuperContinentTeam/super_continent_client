@@ -15,7 +15,7 @@
   "start-panel-ratio-barren": "Barren",
   "start-panel-world-width": "World Width",
   "start-panel-ai-count": "Count of AI",
-  "start-panel-ai-desc": "The default value for AI participating in the game is 0, and the maximum value is 10",
+  "start-panel-ai-desc": "The default value for AI participating in the game is 0, and the maximum value is 10, (This feature is not open)",
   "start-panel-using-ai": "Active AI",
   "start-panel-import-ai": "Import AI module",
   "room-status-0": "Wait",

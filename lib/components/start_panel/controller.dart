@@ -16,7 +16,6 @@ class StartPanelController extends GetxController {
   RxBool usingAI = false.obs;
 
   final countryNameController = TextEditingController(text: "");
-  final aiCountController = TextEditingController(text: "0");
   final aiModuleController = TextEditingController(text: "");
 
   changeWorldWidth(int? newValue) {
@@ -36,6 +35,15 @@ class StartPanelController extends GetxController {
     });
   }
 
+  changeAiCount(double? value) {
+    if (value == null) {
+      aiCount.value = 0;
+    } else {
+      aiCount.value = value.toInt();
+    }
+    update();
+  }
+
   changeUsingAI(value) {
     usingAI.value = value;
     update();
@@ -43,7 +51,7 @@ class StartPanelController extends GetxController {
 
   importAIModule() async {
     final result = await FilePicker.platform.pickFiles(type: FileType.any);
-    if(result!= null){
+    if (result != null) {
       aiModuleController.text = result.files.single.path!;
       update();
     }

@@ -38,6 +38,32 @@ class SettingPage extends StatelessWidget {
             Expanded(child: Container())
           ],
         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(child: Container()),
+            const Expanded(child: Text("服务器地址")),
+            Expanded(
+              child: TextField(
+                controller: controller.serverHostController,
+              ),
+            ),
+            Expanded(child: Container())
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(child: Container()),
+            const Expanded(child: Text("服务器端口")),
+            Expanded(
+              child: TextField(
+                controller: controller.serverPortController,
+              ),
+            ),
+            Expanded(child: Container())
+          ],
+        ),
         BackAndConfirm(
           backToDo: () {
             HomeFrameworkController.body.value = HomePage();
