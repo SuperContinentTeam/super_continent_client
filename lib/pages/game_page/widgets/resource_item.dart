@@ -15,26 +15,31 @@ class ResourceItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SizedBox(
-          width: 30,
-          height: 30,
-          child: Image.asset("assets/images/$iconPath"),
-        ),
-        Column(
-          children: [
-            Text(
-              formatNumber(reserve),
-              style: TextStyle(color: reserve >= 0 ? Colors.black : Colors.red),
-            ),
-            Text(
-              formatNumber(monthly),
-              style: TextStyle(color: monthly >= 0 ? Colors.black : Colors.red),
-            )
-          ],
-        )
-      ],
+    return InkWell(
+      onTap: () {},
+      child: Row(
+        children: [
+          SizedBox(
+            width: 30,
+            height: 30,
+            child: Image.asset("assets/images/$iconPath"),
+          ),
+          Column(
+            children: [
+              Text(
+                formatNumber(reserve),
+                style:
+                    TextStyle(color: reserve >= 0 ? Colors.black : Colors.red),
+              ),
+              Text(
+                formatNumber(monthly),
+                style:
+                    TextStyle(color: monthly >= 0 ? Colors.black : Colors.red),
+              )
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
