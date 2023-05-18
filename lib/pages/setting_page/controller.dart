@@ -16,8 +16,8 @@ class SettingPageController extends GetxController {
     HiveDataBase.getOrCreate(HiveKeys.language),
   );
 
-  final serverHostController = TextEditingController();
-  final serverPortController = TextEditingController();
+  final serverHostController = TextEditingController(text: "127.0.0.1");
+  final serverPortController = TextEditingController(text: "55555");
 
   @override
   onInit() {

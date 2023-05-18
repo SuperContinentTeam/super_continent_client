@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:super_continent_client/components/back_and_confirm.dart';
 import 'package:super_continent_client/components/start_panel/controller.dart';
+import 'package:super_continent_client/pages/game_page/index.dart';
 import 'package:super_continent_client/utils/localization/core.dart';
 
 import '../../frameworks/home_framework.dart';
@@ -183,7 +183,9 @@ class StartPanel extends StatelessWidget {
                 backToDo: () {
                   HomeFrameworkController.body.value = HomePage();
                 },
-                confirmToDo: () {},
+                confirmToDo: () {
+                  HomeFrameworkController.body.value = GamePage();
+                },
               )
             ],
           );

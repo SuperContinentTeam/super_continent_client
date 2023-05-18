@@ -64,7 +64,8 @@ class HomePage extends StatelessWidget {
                     exit(0);
                   },
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent),
+                    backgroundColor: Colors.redAccent,
+                  ),
                   child: Text(controller.exit),
                 ),
               )
