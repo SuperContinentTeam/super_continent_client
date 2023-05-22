@@ -27,16 +27,11 @@ class HeaderPanel extends StatelessWidget {
         RxDouble reserve = controller.resourceMap[e]![CommonKey.reserve]!;
         RxDouble monthly = controller.resourceMap[e]![CommonKey.monthly]!;
         return Expanded(
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black, width: 1),
-            ),
-            child: Obx(
-              () => ResourceItem(
-                iconPath: "$e.png",
-                reserve: reserve.value,
-                monthly: monthly.value,
-              ),
+          child: Obx(
+            () => ResourceItem(
+              iconPath: "$e.png",
+              reserve: reserve.value,
+              monthly: monthly.value,
             ),
           ),
         );
