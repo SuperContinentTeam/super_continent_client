@@ -3,27 +3,31 @@ import 'package:super_continent_client/components/border_inkwell.dart';
 
 import '../controller.dart';
 
-class WorldPanel extends StatelessWidget {
-  const WorldPanel({Key? key, required this.controller}) : super(key: key);
+class ZoningPanel extends StatelessWidget {
+  const ZoningPanel({
+    Key? key,
+    required this.controller,
+    this.zoningSize = 1,
+  }) : super(key: key);
+
   final GamePageController controller;
+  final int? zoningSize;
 
   @override
   Widget build(BuildContext context) {
-    int size = controller.worldSize.value;
-
     return GridView.builder(
-      itemCount: size * size,
+      itemCount: zoningSize! * zoningSize!,
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: size,
-        mainAxisSpacing: 0, // 主轴方向间距
-        crossAxisSpacing: 0, // 横轴方向间距
-        childAspectRatio: 1, // 子项的宽高比
+        crossAxisCount: zoningSize!,
+        mainAxisSpacing: 0,
+        crossAxisSpacing: 0,
+        childAspectRatio: 1,
       ),
       itemBuilder: (context, index) {
         return BorderInkWell(
           onTap: () {},
-          child: Text("${index ~/ size},${index % size}"),
+          child: Text("${index ~/ zoningSize!},${index % zoningSize!}"),
         );
       },
     );

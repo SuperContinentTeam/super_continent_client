@@ -18,7 +18,7 @@ class HomeFramework extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(MyLocalization.get("title"))),
+      // appBar: AppBar(title: Text(MyLocalization.get("title"))),
       body: Obx(
         () => Center(child: HomeFrameworkController.body.value),
       ),
