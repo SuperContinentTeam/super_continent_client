@@ -33,12 +33,14 @@ class ResourceItem extends StatelessWidget {
                 Text(
                   formatNumber(reserve),
                   style: TextStyle(
-                      color: reserve >= 0 ? Colors.black : Colors.red),
+                    color: reserve >= 0 ? Colors.black : Colors.red,
+                  ),
                 ),
                 Text(
                   formatNumber(monthly),
                   style: TextStyle(
-                      color: monthly >= 0 ? Colors.black : Colors.red),
+                    color: monthly >= 0 ? Colors.black : Colors.red,
+                  ),
                 )
               ],
             ),
