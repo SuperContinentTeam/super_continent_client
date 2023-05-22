@@ -21,11 +21,7 @@ class GamePage extends StatelessWidget {
       children: [
         HeaderPanel(key: headerPanelKey, controller: controller),
         LayoutBuilder(builder: (context, constraints) {
-          final RenderBox renderBox =
-              headerPanelKey.currentContext!.findRenderObject() as RenderBox;
-          final double headerHeight = renderBox.size.height;
-          final double appBarHeight = AppBar().preferredSize.height;
-          final worldHeight = screenHeight - appBarHeight - headerHeight;
+          final worldHeight = _getWorldPanelHeight(screenHeight);
           return SizedBox(
             width: worldHeight,
             height: worldHeight,
@@ -34,5 +30,14 @@ class GamePage extends StatelessWidget {
         }),
       ],
     );
+  }
+
+  double _getWorldPanelHeight(double screenHeight) {
+    final RenderBox renderBox =
+        headerPanelKey.currentContext!.findRenderObject() as RenderBox;
+    final double headerHeight = renderBox.size.height;
+    final double appBarHeight = AppBar().preferredSize.height;
+    final worldHeight = screenHeight - appBarHeight - headerHeight;
+    return worldHeight;
   }
 }
