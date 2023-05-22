@@ -16,17 +16,15 @@ class WorldPanel extends StatelessWidget {
       itemCount: 100,
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: size, // 10列
+        crossAxisCount: size,
         mainAxisSpacing: 0, // 主轴方向间距
         crossAxisSpacing: 0, // 横轴方向间距
         childAspectRatio: 1, // 子项的宽高比
       ),
       itemBuilder: (context, index) {
-        return Obx(
-          () => BorderInkWell(
-            onTap: () {},
-            child: Text("${index ~/ size},${index % size}"),
-          ),
+        return BorderInkWell(
+          onTap: () {},
+          child: Text("${index ~/ size},${index % size}"),
         );
       },
     );
