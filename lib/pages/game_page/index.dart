@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:super_continent_client/pages/game_page/controller.dart';
+import 'package:super_continent_client/pages/game_page/widgets/filter_panel.dart';
 import 'package:super_continent_client/pages/game_page/widgets/header_panel.dart';
 import 'package:super_continent_client/pages/game_page/widgets/world_panel.dart';
 
@@ -11,6 +12,7 @@ class GamePage extends StatelessWidget {
 
   final GlobalKey headerPanelKey = GlobalKey();
   final GlobalKey worldPanelKey = GlobalKey();
+  final GlobalKey filterPanelKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,9 @@ class GamePage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         HeaderPanel(key: headerPanelKey, controller: controller),
+        FilterPanel(key: filterPanelKey),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             LayoutBuilder(builder: (context, constraints) {
               final worldHeight = _getWorldPanelHeight(screenHeight);
@@ -33,7 +36,7 @@ class GamePage extends StatelessWidget {
             }),
             Container()
           ],
-        )
+        ),
       ],
     );
   }
@@ -41,9 +44,15 @@ class GamePage extends StatelessWidget {
   double _getWorldPanelHeight(double screenHeight) {
     final RenderBox renderBox =
         headerPanelKey.currentContext!.findRenderObject() as RenderBox;
+    final RenderBox renderBoxFilter =
+        filterPanelKey.currentContext!.findRenderObject() as RenderBox;
+
     final double headerHeight = renderBox.size.height;
+    final double filterHeight = renderBoxFilter.size.height;
     final double appBarHeight = AppBar().preferredSize.height;
-    final worldHeight = screenHeight - appBarHeight - headerHeight;
+    final worldHeight =
+        screenHeight - appBarHeight - headerHeight - filterHeight;
+
     return worldHeight;
   }
 }

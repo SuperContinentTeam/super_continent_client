@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:super_continent_client/components/border_inkwell.dart';
 
 import '../controller.dart';
 
@@ -8,9 +10,6 @@ class WorldPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final double appBarHeight = AppBar().preferredSize.height;
-    // final double screenHeight = MediaQuery.of(context).size.height;
-    // final double availableHeight = screenHeight - appBarHeight;
     int size = controller.worldSize.value;
 
     return GridView.builder(
@@ -23,12 +22,8 @@ class WorldPanel extends StatelessWidget {
         childAspectRatio: 1, // 子项的宽高比
       ),
       itemBuilder: (context, index) {
-
-        return Container(
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black),
-          ),
-          child: InkWell(
+        return Obx(
+          () => BorderInkWell(
             onTap: () {},
             child: Text("${index ~/ size},${index % size}"),
           ),
