@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 import 'package:super_continent_client/utils/common_keys.dart';
 
 class GamePageController extends GetxController {
+  RxInt worldSize = RxInt(10);
+
   final resourceMap = {
     CommonKey.energy: {
       CommonKey.reserve: RxDouble(0),
