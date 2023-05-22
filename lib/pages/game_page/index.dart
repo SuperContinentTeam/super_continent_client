@@ -20,14 +20,20 @@ class GamePage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         HeaderPanel(key: headerPanelKey, controller: controller),
-        LayoutBuilder(builder: (context, constraints) {
-          final worldHeight = _getWorldPanelHeight(screenHeight);
-          return SizedBox(
-            width: worldHeight,
-            height: worldHeight,
-            child: WorldPanel(key: worldPanelKey, controller: controller),
-          );
-        }),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            LayoutBuilder(builder: (context, constraints) {
+              final worldHeight = _getWorldPanelHeight(screenHeight);
+              return SizedBox(
+                width: worldHeight,
+                height: worldHeight,
+                child: WorldPanel(key: worldPanelKey, controller: controller),
+              );
+            }),
+            Container()
+          ],
+        )
       ],
     );
   }
