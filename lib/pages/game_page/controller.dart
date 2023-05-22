@@ -22,6 +22,18 @@ class GamePageController extends GetxController {
     CommonKey.alloy: {
       CommonKey.reserve: RxDouble(0),
       CommonKey.monthly: RxDouble(0),
-    }
+    },
+    CommonKey.physics: {
+      CommonKey.reserve: RxDouble(0),
+      CommonKey.monthly: RxDouble(0),
+    },
+    CommonKey.engineer: {
+      CommonKey.reserve: RxDouble(0),
+      CommonKey.monthly: RxDouble(0),
+    },
+    CommonKey.beyond: {
+      CommonKey.reserve: RxDouble(0),
+      CommonKey.monthly: RxDouble(0),
+    },
   };
 }

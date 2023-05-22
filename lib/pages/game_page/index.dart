@@ -15,6 +15,9 @@ class GamePage extends StatelessWidget {
     CommonKey.food,
     CommonKey.customer,
     CommonKey.alloy,
+    CommonKey.physics,
+    CommonKey.engineer,
+    CommonKey.beyond,
   ];
 
   @override
